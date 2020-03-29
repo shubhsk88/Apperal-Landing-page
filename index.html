@@ -28,19 +28,42 @@
         <div class="main__body">
           Hello fellow shoppers! We're currently building our new fashion store.
           Add your email below to stay up-to-date with announcements and our
-          launch deals. Email Address
+          launch deals.
         </div>
+        <form class="form">
+          <div class="input__error">
+            <input
+              type="email"
+              placeholder="Email Address"
+              class="email"
+              oninvalid="changer()"
+              required
+            />
+            <button type="submit" class="submit">
+              <img src="images/icon-arrow.svg" alt="" />
+            </button>
+          </div>
+        </form>
+        <footer>
+          <p class="attribution">
+            Challenge by
+            <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+              >Frontend Mentor</a
+            >. Coded by <a href="#">Shubham Singh</a>.
+          </p>
+        </footer>
       </div>
       <div class="image"></div>
     </div>
 
-    <footer>
-      <p class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </p>
-    </footer>
+    <script>
+      function changer() {
+        let errors = document.querySelector('.input__error');
+        console.log(errors);
+        errors.classList.add('adder');
+      }
+    </script>
   </body>
 </html>
